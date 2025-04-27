@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import DefaultLayout from '@/layouts/DefaultLayout';
+import Detail from '@/pages/Detail';
+import Error from '@/pages/Error';
+import Home from '@/pages/Home';
+import Search from '@/pages/Search';
 import './App.css';
-import DefaultLayout from './layouts/DefaultLayout';
-import Detail from './pages/Detail';
-import Error from './pages/Error';
-import Home from './pages/Home';
-import Search from './pages/Search';
 
 function App() {
   return (

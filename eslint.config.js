@@ -44,7 +44,6 @@ export default [
       ...jsxA11y.configs.recommended.rules,
       ...patchedImportPlugin.configs.recommended.rules,
 
-      // Airbnb 룰 핵심 추출
       'react/jsx-filename-extension': ['warn', { extensions: ['.jsx'] }],
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
@@ -53,7 +52,6 @@ export default [
       'import/order': [
         'warn',
         {
-          // ← import 순서 관리
           groups: ['builtin', 'external', 'internal'],
           pathGroups: [
             {
@@ -70,16 +68,15 @@ export default [
           },
         },
       ],
-      'no-var': 'warn', // var 사용 금지
+      'no-var': 'warn',
       'prefer-const': [
         'error',
         {
-          destructuring: 'all', // 배열과 객체 분해할당에도 적용
-          ignoreReadBeforeAssign: false, // 변수 선언 전에 읽히는 경우를 무시할지 여부
+          destructuring: 'all',
+          ignoreReadBeforeAssign: false,
         },
       ],
 
-      // 추가된 플러그인 적용
       'prettier/prettier': [
         'error',
         {
@@ -100,6 +97,12 @@ export default [
     settings: {
       react: {
         version: 'detect',
+      },
+      'import/resolver': {
+        alias: {
+          map: [['@', './src']],
+          extensions: ['.js', '.jsx'],
+        },
       },
     },
   },
